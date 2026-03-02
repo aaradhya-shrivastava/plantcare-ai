@@ -1,0 +1,20 @@
+Activity 2.1 – Understanding Transfer Learning with MobileNetV2
+
+Transfer Learning is a machine learning technique where a model trained on one task is reused for another related task.
+
+It helps reduce training time, requires less data, and improves model performance.
+
+MobileNetV2 is a lightweight and efficient model designed for mobile applications. It uses depthwise separable convolutions and is pre-trained on ImageNet with 1000 classes.
+
+In this project, we:
+- Load pre-trained MobileNetV2
+- Freeze base layers
+- Add custom classification layers
+- Train it on 38 plant disease classes
+Advantages of Transfer Learning in this project:
+- Faster training compared to training from scratch
+- Better feature extraction from limited plant images
+- Improved accuracy with fewer computational resources
+
+Conclusion:
+Transfer learning using MobileNetV2 makes the plant disease detection system efficient, scalable, and suitable for real-world agricultural applications.
