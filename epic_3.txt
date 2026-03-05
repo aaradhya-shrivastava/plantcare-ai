@@ -1,0 +1,107 @@
+In this project, transfer learning using MobileNetV2 was successfully applied for plant disease classification.
+
+The training process included:
+
+Model compilation
+
+Smart callback configuration
+
+Supervised learning on 38 classes
+
+Performance evaluation through accuracy and loss visualization
+
+This approach reduces training time, requires less data, and improves classification performance compared to training from scratch.
+
+📘 Activity 3.1 – Model Compilation (Theory)
+
+Model compilation is the step where we configure how the neural network will learn.
+
+In this project:
+
+We used the Adam optimizer to update weights efficiently.
+
+We used Categorical Crossentropy loss because it is a multi-class classification problem (38 plant disease classes).
+
+We used Accuracy as the evaluation metric to measure model performance.
+
+Compilation defines:
+
+How errors are calculated (Loss Function)
+
+How weights are updated (Optimizer)
+
+How performance is measured (Metrics)
+
+Without compilation, the model cannot start learning.
+
+📘 Activity 3.2 – Setup Training Callbacks (Theory)
+
+Callbacks are functions that control training behavior automatically.
+
+In this project, we used:
+
+1️⃣ ModelCheckpoint
+
+Saves the best model based on validation accuracy.
+
+2️⃣ ReduceLROnPlateau
+
+Reduces learning rate if validation loss stops improving.
+
+3️⃣ EarlyStopping
+
+Stops training when validation loss does not improve for several epochs to prevent overfitting.
+
+Callbacks improve:
+
+Model stability
+
+Training efficiency
+
+Generalization performance
+
+They help make the training process smarter and more optimized.
+
+📘 Activity 3.3 – Model Training (Theory)
+
+Model training is the process where the neural network learns patterns from labeled plant images.
+
+During training:
+
+Input images pass through MobileNetV2 (feature extractor).
+
+The custom Dense layer classifies images into 38 disease categories.
+
+The model compares predictions with actual labels.
+
+Loss is calculated.
+
+Weights are updated using backpropagation.
+
+Training is performed for multiple epochs, where each epoch means the model sees the entire dataset once.
+
+Validation data is used to monitor performance and detect overfitting.
+
+📘 Activity 3.4 – Visualizing Training History (Theory)
+
+After training, we analyze model performance using graphs.
+
+Two important plots are:
+
+1️⃣ Accuracy Graph
+
+Shows improvement in prediction accuracy over epochs.
+
+2️⃣ Loss Graph
+
+Shows reduction in error during training.
+
+These graphs help to:
+
+Detect overfitting (when validation accuracy decreases)
+
+Evaluate learning stability
+
+Decide if more training is needed
+
+Visualization provides a clear understanding of how well the model learned.
