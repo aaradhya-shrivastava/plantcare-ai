@@ -25,7 +25,7 @@ to detect multiple plant diseases.
 
 
 # Team Members
-- Aaradhya Shrivastava
+- Aaradhya Shrivastava(Team lead)
 - Aarya Upadhyay
 - Anjali Raikwar
 - Anamika Bharti
