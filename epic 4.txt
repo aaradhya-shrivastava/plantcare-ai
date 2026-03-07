@@ -1,0 +1,39 @@
+#Model Evaluation and Testing – PlantCare AI
+
+In this task, the trained deep learning model was evaluated to measure its performance on the validation or test dataset. The purpose of this step is to understand how accurately the model can predict plant diseases on unseen data.
+
+#Model Evaluation
+
+The model is evaluated using the validation dataset through the `model.evaluate()` function. This function calculates important performance metrics such as:
+
+* **Validation Loss** – Measures the error of the model predictions.
+* **Validation Accuracy** – Shows how many predictions were correct.
+
+These metrics help determine how well the trained model generalizes to new data.
+
+#Generating Predictions
+
+The model then generates predictions on the validation dataset using `model.predict()`. The predicted probabilities are converted into class labels using `numpy.argmax()` so that they can be compared with the actual labels.
+
+#Classification Report
+
+A **classification report** is generated using `sklearn.metrics.classification_report`. This report provides detailed evaluation metrics for each plant disease class including:
+
+* Precision
+* Recall
+* F1-score
+* Support
+
+These metrics help analyze how well the model performs for each category of plant disease.
+
+#Confusion Matrix
+
+A **confusion matrix** is created using `confusion_matrix()` to visualize the prediction results. It shows how many predictions were correct and where the model made mistakes between different classes.
+
+# Saving the Final Model
+
+Finally, the trained and evaluated model is saved using `model.save("final_plant_disease_model.h5")`. Saving the model allows it to be reused later for prediction or deployment without retraining.
+
+#Conclusion
+
+This evaluation process helps verify the reliability and accuracy of the PlantCare AI model in detecting plant diseases and ensures that the final trained model is ready for practical use.
